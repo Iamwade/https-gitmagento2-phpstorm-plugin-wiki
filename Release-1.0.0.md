@@ -1,16 +1,16 @@
-# WHAT’S NEW IN MAGENTO PHPSTORM 1.0.0
+# WHAT’S NEW IN MAGENTO PHPSTORM PLUGIN 1.0.0
 
-This major release includes MFTF support, Require JS mapping support, GraphQl support, Plugin declaration inspection,
-code generation, and many more.
+This major release includes MFTF support, RequireJS mapping support, GraphQL support, Plugin declaration inspection,
+code generation and many more.
 
 ## Code generation
 
-The code generation is one of the most wanted features by the Magento community. There are a bunch of existing open source solutions, however, generating code using the IDE seems to be the most convenient way to go. Therefore we created several actions that help with common Magento 2 customizations. This list will be extended in the future.
+The code generation is one of the most wanted feature in Magento community. There is a bunch of existing open source solutions, however, generating code using the IDE seems to be the most convenient way to go. Therefore several actions were created to help with common Magento 2 customizations. This list will be extended in the future.
 All templates used for generation can be found and edited in `Preferences/Settings | Editor | File and Code Templates`.
 
 ### Create a new module
 
-You can create a new Magento 2 module from the context menu or by pressing Ctrl(⌘)+N.
+New Magento 2 module can be created from the context menu or by pressing Ctrl(⌘)+N.
 
 ![](https://raw.githubusercontent.com/wiki/magento/magento2-phpstorm-plugin/images/1-0-0/1-new-module.gif)
 
@@ -34,13 +34,13 @@ The action creates a class along with a preference declaration record in di.xml 
  
 ### Create an observer for an event
 
-You can create a new observer from the context menu. Just right click on the event name and specify the module, area, and observer name.
+New observer can be created from the context menu. Just right click on the event name and specify the module, area, and observer name.
 
 ![](https://raw.githubusercontent.com/wiki/magento/magento2-phpstorm-plugin/images/1-0-0/6-observer.gif)
 
 #### Create a module file using a template (MVP).
 
-We added several actions for creating module files from templates.
+Several actions were added for creating module files from templates.
 
 * Block:
 
@@ -50,13 +50,13 @@ We added several actions for creating module files from templates.
 
 ![](https://raw.githubusercontent.com/wiki/magento/magento2-phpstorm-plugin/images/1-0-0/8-view-model.gif)
 
-* GraphQl Resolver:
+* GraphQL Resolver:
 
 ![](https://raw.githubusercontent.com/wiki/magento/magento2-phpstorm-plugin/images/1-0-0/9-resolver.gif)
 
 ### In editor generation of Plugin Methods
 
-You can create a new plugin method from the context menu (generate...) or by pressing Ctrl(⌘)+N.
+New plugin method can be created from the context menu (generate...) or by pressing Ctrl(⌘)+N.
 
 ![](https://raw.githubusercontent.com/wiki/magento/magento2-phpstorm-plugin/images/1-0-0/10-in-editor-plugin.gif)
 
@@ -78,7 +78,7 @@ Inspection highlights the following cases:
 ### Plugin duplication inspection in the scope of di.xml
 
 This inspection highlights possible accidental plugin duplication.
-Plugin names must be unique. In case overriding is wanted, the best practice is to disable the original plugin and give a unique name to the current plugin.
+Plugin name must be unique. In case if overriding is wanted, the best practice is to disable the original plugin and give a unique name to the current plugin.
 
 ![](https://raw.githubusercontent.com/wiki/magento/magento2-phpstorm-plugin/images/1-0-0/12-plugin-duplication-inspection.gif)
 
@@ -88,9 +88,9 @@ Inspection for observer declaration records, similar to plugin one.
 
 ![](https://raw.githubusercontent.com/wiki/magento/magento2-phpstorm-plugin/images/1-0-0/13-observer-duplication-inspection.gif)
 
-### GraphQL resolver inspection in the scope of PHP class (Requires GraphqlJs plugin)
+### GraphQL resolver inspection in the scope of PHP class (Requires GraphQLJS plugin)
 
-If a class is configured in `schema.graphqls` as a resolver, it should implement one of the resolver interfaces.
+If a class is configured in `schema.GraphQLs` as a resolver, it should implement one of the resolver interfaces.
 
 ![](https://raw.githubusercontent.com/wiki/magento/magento2-phpstorm-plugin/images/1-0-0/14-resolver-inspection.gif) 
 
@@ -104,13 +104,13 @@ This inspection highlights the `cacheable` attribute which is set to be false in
 
 ### Line markers from a Plugin class to a Target class
 
-In the previous version of the plugin existed a possibility to navigate from the target class and method to the plugin class and method via line markers. Now we added line markers for the navigation in the opposite direction.
+In the previous version existed a possibility to navigate from the target class and method to the plugin class and method via line markers. Now line markers for the navigation were added in the opposite direction.
 
 ![](https://raw.githubusercontent.com/wiki/magento/magento2-phpstorm-plugin/images/1-0-0/16-plugin-target-line-markers.gif)
 
 ### MFTF support
 
-We added support of the most commonly used MFTF XML directives.
+Support of the most commonly used MFTF XML directives were added.
 
 * Page URL completion and reference
 
@@ -128,9 +128,9 @@ We added support of the most commonly used MFTF XML directives.
 
 ![](https://raw.githubusercontent.com/wiki/magento/magento2-phpstorm-plugin/images/1-0-0/20-mftf-selector.gif)
 
-### RequireJs mapping support
+### RequireJS mapping support
 
-The RequireJs configuration file `requirejs-config.js` is commonly used in the different areas of Magento 2. There is a possibility to make aliases for a component using it. We added support of this mapping to have an ability to easily navigate between JS files.
+The RequireJS configuration file `requirejs-config.js` is commonly used in the different areas of Magento 2. There is a possibility to make aliases for a component using it. We added support of this mapping to have an ability to easily navigate between JS files.
 
 * Reference on injected argument
 
@@ -140,26 +140,15 @@ The RequireJs configuration file `requirejs-config.js` is commonly used in the d
 
 ![](https://raw.githubusercontent.com/wiki/magento/magento2-phpstorm-plugin/images/1-0-0/require-js-reference-xml.gif)
 
-### GraphQL support (Optional, Requires GraphqlJs plugin)
+### GraphQL support (Optional, Requires GraphQLJS plugin)
 
-Sometimes you may need to quickly navigate from GraphQl resolver to schema and vice versa. We added line markers to make it possible. To use this functionality please install [GraphQlJs plugin](https://plugins.jetbrains.com/plugin/8097-js-graphql).
+Sometimes you may need to quickly navigate from GraphQL resolver to schema and vice versa. Line markers were added to make it possible. To use this functionality please install [GraphQLJS plugin](https://plugins.jetbrains.com/plugin/8097-js-GraphQL).
 
-![](https://raw.githubusercontent.com/wiki/magento/magento2-phpstorm-plugin/images/1-0-0/22-graphql-line-marker.gif)
+![](https://raw.githubusercontent.com/wiki/magento/magento2-phpstorm-plugin/images/1-0-0/22-GraphQL-line-marker.gif)
 
-Thanks for our awesome contributors who make this release possible: 
+Thanks to our awesome contributors who made this release possible:
 
-[Vasilii Burlacu](https://github.com/vasilii-b), [Roman Glushko](https://github.com/roma-glushko), [Vitaliy Boyko](https://github.com/VitaliyBoyko), [Eduard Chitoraga](https://github.com/eduard13), [Max Mezhensky](https://github.com/mmezhensky), [Yaroslav Rogoza](https://github.com/rogyar), [Andrew Chornij](https://github.com/AndreyChorniy) - [ATWIX](https://www.atwix.com/)
-
+[Vasilii Burlacu](https://github.com/vasilii-b), [Roman Glushko](https://github.com/roma-glushko), [Vitaliy Boyko](https://github.com/VitaliyBoyko), [Eduard Chitoraga](https://github.com/eduard13), [Max Mezhensky](https://github.com/mmezhensky), [Yaroslav Rogoza](https://github.com/rogyar), [Andrew Chornij](https://github.com/AndreyChorniy) - [Atwix](https://www.atwix.com/)
 [Shankar Konar](https://github.com/konarshankar07)
-
 [Alexander Shkurko](https://github.com/coderimus) - [Magecom](https://magecom.net/)
-
-[Bohdan Harniuk](https://github.com/sora1004) - [SMILE](https://smile-ukraine.com/)
-
-[Eugene Tulika](https://github.com/vrann)
-
-[Igor Melnikov](https://github.com/melnikovi), [Dan Mooney](https://github.com/danmooney2), [Lena Orobei](https://github.com/lenaorobei) - [ADOBE](https://www.adobe.com)
-
-
-
-
+[Bohdan Harniuk](https://github.com/sora1004) - [Smile](https://smile-ukraine.com/)
