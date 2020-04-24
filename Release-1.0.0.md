@@ -1,4 +1,4 @@
-# WHAT’S NEW IN MAGENTO PHPSTORM PLUGIN 1.0.0
+# What's new in Magento PHPStorm Plugin 1.0.0
 
 This major release includes MFTF support, RequireJS mapping support, GraphQL support, Plugin declaration inspection,
 code generation and many more.
@@ -145,10 +145,12 @@ The RequireJS configuration file `requirejs-config.js` is commonly used in the d
 Sometimes you may need to quickly navigate from GraphQL resolver to schema and vice versa. Line markers were added to make it possible. To use this functionality please install [GraphQLJS plugin](https://plugins.jetbrains.com/plugin/8097-js-GraphQL).
 
 ![](https://raw.githubusercontent.com/wiki/magento/magento2-phpstorm-plugin/images/1-0-0/22-GraphQL-line-marker.gif)
-
 Thanks to our awesome contributors who made this release possible:
 
 [Vasilii Burlacu](https://github.com/vasilii-b), [Roman Glushko](https://github.com/roma-glushko), [Vitaliy Boyko](https://github.com/VitaliyBoyko), [Eduard Chitoraga](https://github.com/eduard13), [Max Mezhensky](https://github.com/mmezhensky), [Yaroslav Rogoza](https://github.com/rogyar), [Andrew Chornij](https://github.com/AndreyChorniy) - [Atwix](https://www.atwix.com/)
+
 [Shankar Konar](https://github.com/konarshankar07)
+
 [Alexander Shkurko](https://github.com/coderimus) - [Magecom](https://magecom.net/)
+
 [Bohdan Harniuk](https://github.com/sora1004) - [Smile](https://smile-ukraine.com/)
