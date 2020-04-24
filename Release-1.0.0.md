@@ -10,24 +10,33 @@ All templates used for generation can be found and edited in `Preferences/Settin
 
 ### Create a new module
 
-You can create a new Magento 2 module from the context menu or by pressing Ctrl(⌘)+N. 
+You can create a new Magento 2 module from the context menu or by pressing Ctrl(⌘)+N.
+
+![](https://raw.githubusercontent.com/wiki/magento/magento2-phpstorm-plugin/images/1-0-0/1-new-module.gif)
 
 ### Create a new module as a separate project
 
 This should be useful for extension developers. When the project is created IDE suggests selecting the PHP version and suggests including the Magento source code to PHP include paths.
 
+![](https://raw.githubusercontent.com/wiki/magento/magento2-phpstorm-plugin/images/1-0-0/2-new-module-project.gif)
+
 ### Create a plugin for a class public method
 
 The action creates a plugin class method along with a plugin declaration record in di.xml in the scope of the specified module and area. A plugin class and di.xml being created if needed.
+
+![](https://raw.githubusercontent.com/wiki/magento/magento2-phpstorm-plugin/images/1-0-0/3-create-a-plugin.gif)
 
 ### Override class by reference
  
 The action creates a class along with a preference declaration record in di.xml in the scope of the specified module and area.
 
+![](https://raw.githubusercontent.com/wiki/magento/magento2-phpstorm-plugin/images/1-0-0/4-overide-class-by-prefference.gif)
  
 ### Create an observer for an event
 
 You can create a new observer from the context menu. Just right click on the event name and specify the module, area, and observer name.
+
+![](https://raw.githubusercontent.com/wiki/magento/magento2-phpstorm-plugin/images/1-0-0/6-observer.gif)
 
 #### Create a module file using a template (MVP).
 
@@ -35,13 +44,21 @@ We added several actions for creating module files from templates.
 
 * Block:
 
+![](https://raw.githubusercontent.com/wiki/magento/magento2-phpstorm-plugin/images/1-0-0/7-block.gif)
+
 * ViewModel:
 
+![](https://raw.githubusercontent.com/wiki/magento/magento2-phpstorm-plugin/images/1-0-0/8-view-model.gif)
+
 * GraphQl Resolver:
+
+![](https://raw.githubusercontent.com/wiki/magento/magento2-phpstorm-plugin/images/1-0-0/9-resolver.gif)
 
 ### In editor generation of Plugin Methods
 
 You can create a new plugin method from the context menu (generate...) or by pressing Ctrl(⌘)+N.
+
+![](https://raw.githubusercontent.com/wiki/magento/magento2-phpstorm-plugin/images/1-0-0/10-in-editor-plugin.gif)
 
 ## Inspections
 
@@ -56,22 +73,32 @@ Inspection highlights the following cases:
 * Incompatible parameter
 * Redundant parameter
 
+![](https://raw.githubusercontent.com/wiki/magento/magento2-phpstorm-plugin/images/1-0-0/11-plugin-inspection.gif)
+
 ### Plugin duplication inspection in the scope of di.xml
 
 This inspection highlights possible accidental plugin duplication.
 Plugin names must be unique. In case overriding is wanted, the best practice is to disable the original plugin and give a unique name to the current plugin.
 
+![](https://raw.githubusercontent.com/wiki/magento/magento2-phpstorm-plugin/images/1-0-0/12-plugin-duplication-inspection.gif)
+
 ### Observer duplication inspection in the scope of events.xml
 
 Inspection for observer declaration records, similar to plugin one.
 
+![](https://raw.githubusercontent.com/wiki/magento/magento2-phpstorm-plugin/images/1-0-0/13-observer-duplication-inspection.gif)
+
 ### GraphQL resolver inspection in the scope of PHP class (Requires GraphqlJs plugin)
 
-If a class is configured in `schema.graphqls` as a resolver, it should implement one of the resolver interfaces. 
+If a class is configured in `schema.graphqls` as a resolver, it should implement one of the resolver interfaces.
+
+![](https://raw.githubusercontent.com/wiki/magento/magento2-phpstorm-plugin/images/1-0-0/14-resolver-inspection.gif) 
 
 ### Cacheable false in the scope of the default layout
 
-This inspection highlights the` cacheable` attribute which is set to be false in default.xml as that can make the whole site uncacheable.
+This inspection highlights the `cacheable` attribute which is set to be false in default.xml as that can make the whole site uncacheable.
+
+![](https://raw.githubusercontent.com/wiki/magento/magento2-phpstorm-plugin/images/1-0-0/15-cacheable-false-inspection.gif)
 
 ## Reference and navigation
 
@@ -79,17 +106,27 @@ This inspection highlights the` cacheable` attribute which is set to be false in
 
 In the previous version of the plugin existed a possibility to navigate from the target class and method to the plugin class and method via line markers. Now we added line markers for the navigation in the opposite direction.
 
+![](https://raw.githubusercontent.com/wiki/magento/magento2-phpstorm-plugin/images/1-0-0/16-plugin-target-line-markers.gif)
+
 ### MFTF support
 
 We added support of the most commonly used MFTF XML directives.
 
 * Page URL completion and reference
 
+![](https://raw.githubusercontent.com/wiki/magento/magento2-phpstorm-plugin/images/1-0-0/17-mftf-page.gif)
+
 * Action group completion and reference
+
+![](https://raw.githubusercontent.com/wiki/magento/magento2-phpstorm-plugin/images/1-0-0/18-mftf-action-group.gif)
 
 * Test extends attribute completion and reference
 
+![](https://raw.githubusercontent.com/wiki/magento/magento2-phpstorm-plugin/images/1-0-0/19-mftf-test.gif)
+
 * Selector completion and reference
+
+![](https://raw.githubusercontent.com/wiki/magento/magento2-phpstorm-plugin/images/1-0-0/20-mftf-selector.gif)
 
 ### RequireJs mapping support
 
@@ -97,19 +134,31 @@ The RequireJs configuration file `requirejs-config.js` is commonly used in the d
 
 * Reference on injected argument
 
+![](https://raw.githubusercontent.com/wiki/magento/magento2-phpstorm-plugin/images/1-0-0/21-require-js-reference-js.gif)
+
 * Completion and reference in XML
+
+![](https://raw.githubusercontent.com/wiki/magento/magento2-phpstorm-plugin/images/1-0-0/require-js-reference-xml.gif)
 
 ### GraphQL support (Optional, Requires GraphqlJs plugin)
 
-Sometimes you may need to quickly navigate from GraphQl resolver to schema and vice versa. We added line markers to make it possible. To use this functionality please install GraphqlJs plugin https://plugins.jetbrains.com/plugin/8097-js-graphql.
+Sometimes you may need to quickly navigate from GraphQl resolver to schema and vice versa. We added line markers to make it possible. To use this functionality please install [GraphQlJs plugin](https://plugins.jetbrains.com/plugin/8097-js-graphql).
+
+![](https://raw.githubusercontent.com/wiki/magento/magento2-phpstorm-plugin/images/1-0-0/22-graphql-line-marker.gif)
 
 Thanks for our awesome contributors who make this release possible: 
-Vasilii Burlacu, Roman Glushko, Vitaliy Boyko, Eduard Chitoraga, Max Mezhensky, Yaroslav Rogoza, Andrew Chornij
-Shankar Konar
-Alexander Shkurko
-Bohdan Harniuk
-Eugene Tulika
-Igor Melnikov, Dan Mooney, Lena Orobei
+
+[Vasilii Burlacu](https://github.com/vasilii-b), [Roman Glushko](https://github.com/roma-glushko), [Vitaliy Boyko](https://github.com/VitaliyBoyko), [Eduard Chitoraga](https://github.com/eduard13), [Max Mezhensky](https://github.com/mmezhensky), [Yaroslav Rogoza](https://github.com/rogyar), [Andrew Chornij](https://github.com/AndreyChorniy) - [ATWIX](https://www.atwix.com/)
+
+[Shankar Konar](https://github.com/konarshankar07)
+
+[Alexander Shkurko](https://github.com/coderimus) - [Magecom](https://magecom.net/)
+
+[Bohdan Harniuk](https://github.com/sora1004) - [SMILE](https://smile-ukraine.com/)
+
+[Eugene Tulika](https://github.com/vrann)
+
+[Igor Melnikov](https://github.com/melnikovi), [Dan Mooney](https://github.com/danmooney2), [Lena Orobei](https://github.com/lenaorobei) - [ADOBE](https://www.adobe.com)
 
 
 
