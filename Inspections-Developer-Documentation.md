@@ -63,7 +63,7 @@ The `<localInspection/>` tag attributes:
 1. `ImplementationClass` - inspection implementation class
 
 **Let's add new bundle message with key `inspection.displayName.InvalidDiTypeInspection` 
-to the [InspectionBundleMessagesFile][file:InspectionBundleMessagesFile]:**
+to the [InspectionBundleMessagesFile]:**
 
 ```properties
 inspection.displayName.InvalidDiTypeInspection=Invalid type configuration in the `etc/di.xml` file
@@ -77,8 +77,8 @@ The base class for all local inspections is `com.intellij.codeInspection.LocalIn
 
 | Language                           | Example Implementation                                | Extension Point Class |
 | ------------------------------ | --------------------------------------------- | --------------------- |
-| `PHP` | [PluginInspection][file:PluginInspection] | `com.jetbrains.php.lang.inspections.PhpInspection` |
-| `XML` | [ModuleDeclarationInModuleXmlInspection][file:ModuleDeclarationInModuleXmlInspection] | `com.intellij.codeInspection.XmlSuppressableInspectionTool` |
+| `PHP` | [PluginInspection] | `com.jetbrains.php.lang.inspections.PhpInspection` |
+| `XML` | [ModuleDeclarationInModuleXmlInspection] | `com.intellij.codeInspection.XmlSuppressableInspectionTool` |
 
 **Let's implement `InvalidDependencyInjectionTypeInspection` inspection that extends `XmlSuppressableInspectionTool`:**
 
@@ -151,7 +151,7 @@ if (nameAttribute == null || nameAttribute.getValue() == null || nameAttribute.g
 ```
 
 Now we can access attributes values. We can check if attribute value is existing class 
-by using [PhpClassExistenceValidator][file:PhpClassExistenceValidator] type instance. 
+by using [PhpClassExistenceValidator] type instance. 
 To report problem on the `name` attribute value you can use the next code snippet:
 
 ```java
@@ -168,7 +168,7 @@ problemsHolder.registerProblem(
 You cannot access tag value of PsiElement type. 
 So you can just report problem for tag element, as it is done by Intellij Idea inspections, for example: `com.intellij.xml.util.CheckEmptyTagInspection`.
 
-So, there is a full example: [InvalidDependencyInjectionTypeInspection][file:InvalidDependencyInjectionTypeInspection]
+So, there is a full example: [InvalidDependencyInjectionTypeInspection]
 
 ### <span style="color:red;">*</span> Writing an HTML description of the inspection for display in the inspection preferences panel:
 
@@ -222,8 +222,8 @@ For each testing method create folder in it that has a name the same as method n
 Magento 2 SandBox that used for the tests is in the `./testData/project/magento2` folder.
 
 
-[file:InspectionBundleMessagesFile]: ./../resources/magento2/inspection.properties
-[file:PluginInspection]: ./../src/com/magento/idea/magento2plugin/inspections/php/PluginInspection.java
-[file:ModuleDeclarationInModuleXmlInspection]: ./../src/com/magento/idea/magento2plugin/inspections/xml/ModuleDeclarationInModuleXmlInspection.java
-[file:PhpClassExistenceValidator]: ./../src/com/magento/idea/magento2plugin/inspections/validator/PhpClassExistenceValidator.java
-[file:InvalidDependencyInjectionTypeInspection]: ./../src/com/magento/idea/magento2plugin/inspections/xml/InvalidDependencyInjectionTypeInspection.java
+[InspectionBundleMessagesFile]: https://github.com/magento/magento2-phpstorm-plugin/blob/4.0.0-develop/resources/magento2/inspection.properties
+[PluginInspection]: https://github.com/magento/magento2-phpstorm-plugin/blob/4.0.0-develop/src/com/magento/idea/magento2plugin/inspections/php/PluginInspection.java
+[ModuleDeclarationInModuleXmlInspection]: https://github.com/magento/magento2-phpstorm-plugin/blob/4.0.0-develop/src/com/magento/idea/magento2plugin/inspections/xml/ModuleDeclarationInModuleXmlInspection.java
+[PhpClassExistenceValidator]: https://github.com/magento/magento2-phpstorm-plugin/blob/4.0.0-develop/src/com/magento/idea/magento2plugin/inspections/validator/PhpClassExistenceValidator.java
+[InvalidDependencyInjectionTypeInspection]: https://github.com/magento/magento2-phpstorm-plugin/blob/4.0.0-develop/src/com/magento/idea/magento2plugin/inspections/xml/InvalidDependencyInjectionTypeInspection.java
